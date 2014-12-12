@@ -659,6 +659,7 @@ class NotebookApp(BaseIPythonApplication):
         
         # setting App.notebook_dir implies setting notebook and kernel dirs as well
         self.config.ShockContentsManager.root_dir = new
+        self.config.WorkspaceContentsManager.root_dir = new
         self.config.FileContentsManager.root_dir = new
         self.config.MappingKernelManager.root_dir = new
         
