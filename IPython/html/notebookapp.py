@@ -658,6 +658,7 @@ class NotebookApp(BaseIPythonApplication):
             raise TraitError("No such notebook dir: %r" % new)
         
         # setting App.notebook_dir implies setting notebook and kernel dirs as well
+        self.config.ShockContentsManager.root_dir = new
         self.config.FileContentsManager.root_dir = new
         self.config.MappingKernelManager.root_dir = new
         
